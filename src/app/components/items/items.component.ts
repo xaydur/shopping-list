@@ -25,6 +25,7 @@ export class ItemsComponent implements OnInit {
   deleteItem(item: Item){
     console.log("se ejecuta el deleteItem")
     this.items = this.items.filter( x => x.id != item.id);
+    //this.itemService.deleteItem(item);
     this.getTotal();
   }
 

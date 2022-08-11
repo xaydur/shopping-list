@@ -33,10 +33,13 @@ export class ItemService {
   constructor() { }
 
   getItems(){
-    return this.items; 
+    return this.items; // obtener datos desde el JSON
   }
 
   addItem(item:Item){
     this.items.unshift(item);
+  }
+  deleteItem(item: Item){
+     this.items = this.items.filter( x => x.id != item.id);
   }
 }

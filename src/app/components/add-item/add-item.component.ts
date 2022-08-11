@@ -15,6 +15,8 @@ export class AddItemComponent implements OnInit {
   price: number = 0;
   quantity: number = 0;
 
+  cant_adds = 0;
+
   constructor(private itemService:ItemService, private router:Router) { }
 
   ngOnInit(): void {
@@ -30,5 +32,6 @@ export class AddItemComponent implements OnInit {
 
     this.itemService.addItem(item);
     this.router.navigate(['/']);
+      
   }
 }
